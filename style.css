@@ -14,6 +14,7 @@ body {
 p, .add-to-cart {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
+    line-height: 1.75;
 }
 
 p {
@@ -24,28 +25,31 @@ p {
 
 h1 {
     margin: 0;
+    line-height: 1;
 }
 
-img {
+/*img {
     width: 100%;
     height: 100%;
-}
+}*/
 
 .product {
     display: flex;
     justify-content: center;
     align-content: space-between;
-    width: 625px;
-    height: 500px;
+    width: 600px;
+    height: 450px;
+    min-height: 450px;
     margin: 0 auto;
     border-radius: 10px;
     overflow: hidden;
     align-self: center;
-    min-height: 350px;
 }
 
 .product-image {
     width: 50%;
+    background-image: url("images/image-product-desktop.jpg");
+    background-size: contain;
 }
 
 .product-details {
@@ -55,7 +59,7 @@ img {
     background-color: hsl(0, 0%, 100%);
     width: 50%;
     box-sizing: border-box;
-    padding: 32px;
+    padding: 36px;
 }
 
 .product-category {
@@ -69,11 +73,13 @@ img {
 .product-prices {
     display: flex;
     width: 100%;
+    align-items: center;
 }
 
 .listed-price {
     color: hsl(158, 36%, 37%);
     font-weight: 500;
+    margin-right: 24px;
 }
 
 .previous-price {
@@ -81,17 +87,26 @@ img {
 }
 
 .add-to-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: 700;
     color: hsl(0, 0%, 100%);
     background-color: hsl(158, 36%, 37%);
     width: 100%;
     border: none;
     border-radius: 10px;
+    padding: 14px 0;
+}
+
+.add-to-cart:active {
+    background-color: hsl(157, 36%, 20%);
 }
 
 .cart-image {
     height: 16px;
     width: 16px;
+    padding-right: 12px;
 }
 
 .attribution { 
@@ -102,4 +117,27 @@ img {
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 400px) {
+    .product {
+        flex-direction: column;
+        width: 350px;
+        height: 600px;
+    }
+
+    .product-image, .product-details {
+        width: 100%;
+    }
+
+    .product-image {
+        background-image: url("images/image-product-mobile.jpg");
+        background-size: cover;
+        height: 40%;
+    }
+
+    .product-details {
+        height: 60%;
+        padding: 24px;
+    }
 }
