@@ -1,5 +1,14 @@
 html {
+    height: 100%;
     background-color: hsl(30, 38%, 92%);
+}
+
+body { 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
 }
 
 p, .add-to-cart {
@@ -28,9 +37,11 @@ img {
     align-content: space-between;
     width: 625px;
     height: 500px;
-    margin: 100px auto;
+    margin: 0 auto;
     border-radius: 10px;
     overflow: hidden;
+    align-self: center;
+    min-height: 350px;
 }
 
 .product-image {
@@ -58,7 +69,6 @@ img {
 .product-prices {
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
 }
 
 .listed-price {
@@ -86,7 +96,8 @@ img {
 
 .attribution { 
     font-size: 11px; 
-    text-align: center; 
+    text-align: center;
+    margin: 8px 0;
 }
 
 .attribution a { 
